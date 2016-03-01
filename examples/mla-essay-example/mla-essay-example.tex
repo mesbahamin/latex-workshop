@@ -1,0 +1,93 @@
+% This is an example of how latex can be used to write an mla style essay.
+% Original essay written by Amin Mesbah
+
+\documentclass[12pt]{article}
+
+%You won't need this package. It just generates paragraphs of filler to give you an idea of what the formatting will look like.
+%
+\usepackage{lipsum}
+
+%Margin - 1 inch on all sides
+%
+\usepackage[letterpaper]{geometry}
+\geometry{top=1.0in, bottom=1.0in, left=1.0in, right=1.0in}
+
+%Doublespacing
+%
+\usepackage{setspace}
+\doublespacing
+
+%Setting the font
+%
+\usepackage{times}
+
+%Rotating tables (e.g. sideways when too long)
+%
+\usepackage{rotating}
+
+%For multiple rows in tables
+%
+\usepackage{multirow}
+
+%Line numbering in verse environment
+%
+\usepackage{lineno} 
+
+%Fancy-header package to modify header/page numbering (insert last name)
+%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rhead{Student Last Name \thepage} 
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt} 
+
+%To make sure we actually have header 0.5in away from top edge
+%12pt is one-sixth of an inch. Subtract this from 0.5in to get headsep value
+\setlength\headsep{0.333in}
+
+%Works cited environment
+%(to start, use \begin{workscited...}, each entry preceded by \bibent)
+%
+\newcommand{\bibent}{\noindent \hangindent 40pt}
+\newenvironment{workscited}{\newpage \begin{center} Works Cited \end{center}}{\newpage }
+
+%Begin document
+%
+\begin{document}
+\begin{flushleft}
+%%%%First page name, class, etc
+Student Name \\
+Professor Name \\
+Class Name \\
+Date \\
+
+%%%%Title
+\begin{center}
+Title of Essay
+\end{center}
+
+%%%%Changes paragraph indentation to 0.5in
+\setlength{\parindent}{0.5in} 
+
+
+%%%%Begin body of paper here
+\lipsum[1-6] %This just generates 3 paragraphs of filler text as an example. Replace it with the text of your essay.
+
+
+%%%%Works cited
+% Each new work begins with a \bibent command
+\begin{workscited}
+
+\bibent
+Gleick, James. \textit{Chaos: Making a New Science}. New York: Penguin, 1987. Print.
+
+\bibent
+Henley, Patricia. \textit{The Hummingbird House}. Denver: MacMurray, 1999. Print.
+
+\bibent
+Wysocki, Anne Frances, Johndan Johnson-Eilola, Cynthia L. Selfe, and Geoffrey Sirc. \textit{Writing New Media: Theory and Applications for Expanding the Teaching of Composition}. Logan: Utah State UP, 2004. Print.
+
+\end{workscited}
+\end{flushleft}
+\end{document}
+\}

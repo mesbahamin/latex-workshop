@@ -1,0 +1,88 @@
+% This is a comment. It doesn't show in the final pdf.
+
+%%%%% Preamble %%%%%
+\documentclass[11pt]{article} % Font Size and Document type (article is the standard type)
+
+\usepackage{amsmath} % use the package amsmath, which lets us do mathy things
+\usepackage{graphicx} % use graphicx, which lets us insert images
+\usepackage{multicol} % use multicol, which lets us split things into multiple columns
+\usepackage{biblatex}
+\addbibresource{bibliography.bib}
+% title info
+\title{\textbf{A Simple \LaTeX Document}}
+\author{Your name goes here\\}
+\date{\today}
+
+%%%%% Body of Document %%%%%
+\begin{document}
+
+\maketitle % this command gets the title info from above and puts it all together
+
+\section{Formatting} % this is a section header
+%--------------------------------------------------
+
+\subsection{Basic} % this is a subsection header
+%--------------------------------------------------
+\begin{itemize} % start an unordered list
+\begin{multicols}{2} % break the list into two columns
+	\item \textit{Italic}
+	\item \textbf{Bold}
+	\item \textbf{\textit{Italic and Bold}}
+	\item \underline{Underlined}
+	\item `Single Quotes'
+	\item``Double Quotes''
+\end{multicols}
+\end{itemize}
+
+\subsection{Paragraphs}
+%--------------------------------------------------
+\subsubsection{Alignment}
+\begin{flushleft} % try changing 'flushleft' to 'center' or 'flushright'
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end{flushleft}
+
+\subsection{Math}
+%--------------------------------------------------
+\[ax^2 + bx + c = 0\] % '\[' and '\]' mark the start and end of the math figure
+To write math in the middle of a bunch of words, do it like this: $e=\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n$ See? Easy!
+
+\section{Tables}
+%--------------------------------------------------
+\begin{center}
+\begin{tabular}{|r|c l|} % format the columns
+	\hline % horizontal line
+	a1 & b1 & c1 \\ % '\\' ends the current line
+	a2 & b2 & c2 \\
+	a3 & b3 & c3 \\
+	\hline
+	a4 & b4 & c4 \\
+	\hline
+\end{tabular}
+\end{center}
+
+\section{Images and Figures}
+%--------------------------------------------------
+\begin{figure}[h] % google what h does
+\begin{center}
+	\includegraphics[scale=0.1]{beaker} % we shrink the picture so it's not too big
+\end{center}
+\caption{Here's a picture of a beaker}
+\end{figure}
+
+\section{Other Stuff}
+%--------------------------------------------------
+\begin{enumerate} % start an ordered list
+	\item This is an ordered list
+	\item Break one line \\ into two.
+\end{enumerate}
+
+
+%--------------------------------------------------
+% this is the simplest way to make a bibliography
+\begin{thebibliography}{1}
+	\bibitem{Wikibook} The LaTeX wikibook: {\em https://en.wikibooks.org/wiki/LaTeX}
+\end{thebibliography}
+%--------------------------------------------------
+
+
+\end{document} % all documents must come to an end

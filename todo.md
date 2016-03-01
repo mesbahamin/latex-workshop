@@ -4,8 +4,9 @@ To Do
 - [ ] basic website
 - [ ] flyer 
 - [x] outline of concepts
-- [ ] create code examples
+- [x] create code examples
 - [ ] create practice templates
-- [ ] detailed seminar schedule
+- [ ] detailed workshop schedule
 - [ ] create beamer slides
 - [ ] upload all resources to website
+- [ ] pare everything down to the essentials

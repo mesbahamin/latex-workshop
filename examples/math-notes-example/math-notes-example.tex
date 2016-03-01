@@ -1,0 +1,148 @@
+\documentclass[
+12pt, %font size
+letterpaper, %for printing on American sized paper
+fleqn, % for ligning up our equations
+notitlepage % we don't want a title page
+]{article}
+
+\usepackage{amsmath,amsfonts,amssymb} % Math packages
+\usepackage[letterpaper,margin=1in]{geometry} % Margins
+\usepackage{setspace} % let's us choose between single or double spacing
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\normalfont\scshape} % Make all sections centered, the default font and small caps
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+\singlespacing
+\frenchspacing % No extra spaces after sentances
+
+
+\begin{document}
+
+%------------------------------------------------
+% title information
+\title{\vspace{-2cm}Precalculus: Chapter 5 Notes}
+\author{Amin Mesbah}
+\date{}
+\maketitle
+
+%------------------------------------------------
+
+\section{Exponents}
+
+%------------------------------------------------
+
+\subsection*{Laws of Exponents} % the asterisk ommits the section number
+If $s$, $t$, $a$, and $b$ are real numbers with $a>0$ and $b>0$, then
+
+% the align environment aligns things on multiple lines based on where I put an '&'
+\begin{align}
+	a^s \cdot a^t &= a^{s+t} &(a^s)^t &= a^{st} & (ab)^s &= a^s \cdot b^s \\
+	1^s &= 1 & a^{-s} &= \frac{1}{a^s} = \left(\frac{1}{a}\right)^s & a^0 &= 1 
+\end{align}
+% fractions are a bit tricky. You use them like this:
+% \frac{numerator}{denominator}
+
+%------------------------------------------------
+
+\subsection*{Exponential Functions}
+An \textbf{exponential function} is a function of the form
+
+\begin{align}
+	f(x) = Ca^x
+\end{align}
+
+where $a \in \mathbb{R}$, $a>0$, $a\neq1$, and $C\neq0$ is a real number. The domain of $f$ is $\mathbb{R}$. The base $a$ is the \textbf{growth factor}, and because $f(0) = Ca^0 = C$, we call $C$ the \textbf{initial value}.\\
+
+For $f(x)=Ca^x$, where $a>0$ and $a\neq1$, if $x\in\mathbb{R}$, then
+
+\begin{align}
+	\frac{f(x+1)}{f(x)} &= a & \text{or} && f(x+1)&=af(x)
+\end{align}
+
+%------------------------------------------------
+
+\subsection*{The number $e$}
+
+\begin{align}
+	e&=\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n
+\end{align}
+
+%------------------------------------------------
+
+\subsection*{Solving Exponential Equations}
+
+Use this property, expressing each side of the equation using the same base:
+
+\begin{align}
+	\text{If }a^u=a^v\text{, then }u=v
+\end{align}
+
+%------------------------------------------------
+
+\section{Logarithms}
+
+%------------------------------------------------
+
+$\log_{a}x$ represents the exponent to which $a$ must be raised to obtain $x$.
+
+\begin{align}
+	y &=\log_{a}x\text{ if and only if }x=a^y \\
+	y &=\ln{x}\text{ if and only if }x=e^y \\
+	y &=\log{x}\text{ if and only if }x=10^y
+\end{align}
+
+The domain of $y=\log_{a}x$ is $\{x|x>0\}$.
+
+%------------------------------------------------
+
+\subsection*{Logarithmic Functions}
+
+The logarithmic function is the inverse of the exponential function.
+
+\begin{align}
+	\text{If }f(x)=a^x\text{, then }f^{-1}(x)=\log_{a}x
+\end{align}
+
+The domain of $f^{-1}$ is the range of $f$. The range of $f^{-1}$ is the domain of $f$.
+
+%------------------------------------------------
+
+\subsection*{Properties of Logarithms}
+
+In the following properties, $M$, $N$, and $a$ are positive real numbers, $a\neq1$, and $r \in \mathbb{R}$.
+
+\begin{align}
+	\log_{a}1 &= 0 & log_{a}a &= 1 \\
+	a^{\log_{a}M} &= M & \log_{a}a^r &= r \\
+	\log_{a}M^r &= r\log_{a}M & a^x &= e^{x\ln{a}}
+\end{align}
+
+\begin{align}
+	\log_{a}(MN) &= \log_{a}M + \log_{a}N &
+	\log_{a}\left(\frac{M}{N}\right) &= \log_{a}M - \log_{a}N 
+\end{align}
+
+\begin{align}
+	\text{If }M &= N\text{, then }\log_{a}M = \log_{a}N &
+	\text{If }\log_{a}M &= \log_{a}N\text{, then }M = N
+\end{align}
+
+%------------------------------------------------
+
+\subsection*{Change of Base Formula}
+
+If $a\neq1$, $b\neq1$, and $M$ are positive real numbers, then
+
+\begin{align}
+	\log_{a}M &= \frac{\log_{b}M}{\log_{b}a} & \text{so,} &&
+	\log_{a}M &= \frac{\log{M}}{\log{a}} & \text{and} && \log_{a}M &= \frac{\ln{M}}{\ln{a}}
+\end{align}
+
+%------------------------------------------------
+
+\end{document}
