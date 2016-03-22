@@ -1,1 +1,12 @@
 reference/
+*.aux
+*.ps
+*.log
+*.dvi
+*.tex~
+*.bbl
+*.blg
+*.out
+*.dvi
+*.xml
+*.bcf
