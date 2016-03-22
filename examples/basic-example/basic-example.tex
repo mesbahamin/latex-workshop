@@ -9,7 +9,7 @@
 \usepackage{biblatex}
 \addbibresource{bibliography.bib}
 % title info
-\title{\textbf{A Simple \LaTeX Document}}
+\title{\textbf{A Simple \LaTeX{} Document}}
 \author{Your name goes here\\}
 \date{\today}
 
@@ -43,7 +43,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 \subsection{Math}
 %--------------------------------------------------
+To write a bunch of math all on its own, do it like this:
 \[ax^2 + bx + c = 0\] % '\[' and '\]' mark the start and end of the math figure
+
 To write math in the middle of a bunch of words, do it like this: $e=\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n$ See? Easy!
 
 \section{Tables}
@@ -60,7 +62,7 @@ To write math in the middle of a bunch of words, do it like this: $e=\lim_{n\to\
 \end{tabular}
 \end{center}
 
-\section{Images and Figures}
+\section*{Images and Figures} % use '*' to suppress the section numbering
 %--------------------------------------------------
 \begin{figure}[h] % google what h does
 \begin{center}

@@ -38,6 +38,7 @@ Outline
         - bibliography
 
 - Extras
+    - new commands
     - reading error messages
     - using templates
         - where to get templates
