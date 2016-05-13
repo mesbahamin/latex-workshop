@@ -6,7 +6,7 @@ To Do
 - [x] outline of concepts
 - [x] create code examples
 - [ ] create practice templates
-- [ ] detailed workshop schedule
-- [ ] create beamer slides
+- [x] detailed workshop schedule
+- [x] create beamer slides
 - [ ] upload all resources to website
-- [ ] pare everything down to the essentials
+- [x] pare everything down to the essentials
